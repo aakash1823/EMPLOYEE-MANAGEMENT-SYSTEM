@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Employee Management System </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- <link href="extra/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>  
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+   
+    <header id="header">
+        <div class="d-flex flex-column">
+    
+          <div class="profile">
+            <img src="images/employee.png" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="index.html">Admin</a></h1>
+            <p class="we">admin@gmail.com</p>
+          </div>
+    
+          <nav class="nav-menu">
+            <ul>
+              <li class="dropdown"><a href="#about"><i class="bx bx-user"></i> <span>Employees</span></a>
+                <div class="dropdown-content">
+                    <a href="AllEmp">All Employees</a>
+                    <a href="AddEmp">Add Employees</a>
+                    <a href="EditEmp">Edit Employees</a>
+                    <a href="RemEmp">Remove Employees</a>
+
+                </div></li>
+                <li class="active"><a href="Attend"><i class="bx bx-home"></i> <span>Attendance</span></a></li>
+                <li class="active"><a href="Sal"><i class="bx bx-home"></i> <span>Salary</span></a></li>
+
+                <li class="dwn-lg"><a href="http://localhost"><i class="bx bx-log-out"></i> <span>Logout</span></a></li>
+
+              
+                
+
+             
+            </ul>
+          </nav><!-- .nav-menu -->
+          <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    
+        </div>
+      </header>
+      <main id="main">
+
+
+        <!-- ======= About Section ======= -->
+
+        <section id="All_Employee" class="All_Employee">
+            <h1 class="we2">All Employee</h1>
+           
+              
+              <table class="table table-dark table-hover  table-striped table-responsive-sm "id="data">
+                <thead class="bg-danger">
+                    <tr class="bg-danger">
+                        <th class="we4 we5"scope="col">Photo</th>
+
+                        <th class="we4"scope="col">Employee_id</th>
+                        <th class="we4"scope="col">Name</th>
+                        <th class="we4"scope="col">Dept</th>
+                        <th class="we4"scope="col">DOB</th>
+                        <th class="we4"scope="col">Gender</th>
+                        <th class="we4"scope="col">Email</th>
+                        <th class="we4"scope="col">Address</th>
+                        <th class="we4"scope="col">Pnumber</th>
+                        <th class="we4"scope="col">Salary</th>
+                    </tr>
+                    <% employees.forEach(function(employee) {%>
+                      <tr class="bg-dark">
+                          <td>
+                            <img src="<%= employee.image %>" class="imgsize" alt="">
+                          </td>
+                          <td>
+                              <%= employee.Employee_id %>
+                          </td>
+                          <td>
+                              <%= employee.name %>
+                          </td>
+                          <td>
+                              <%= employee.Dept %>
+                          </td>
+                          <td>
+                              <%= employee.DOB.toLocaleDateString("en-GB") %>
+                          </td>
+                          <td>
+                              <%= employee.Gender %>
+                          </td>
+                          <td>
+                              <%= employee.Email %>
+                          </td>
+                          <td>
+                              <%= employee.Address   %>
+                          </td>
+                          <td>
+                              <%= employee.Pnumber %>
+                          </td>
+                          <td>
+                            <%= employee.Salary %>
+                        </td>
+                      </tr>
+                      <% }); %>
+                </thead>
+                
+               
+              </table>
+
+          
+        </section>
+        <script src="2.js"></script>
+
+    <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+</body>

@@ -1,0 +1,25 @@
+.top{
+    margin-top:250px ;
+    
+
+}
+.abc{
+    background: #000000;
+    color: white;
+}
+body{
+    background: #9053c7;
+    
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.link{
+    text-decoration: none;
+}
+
+.link :hover{
+    color:#9053c7;
+    text-decoration: none;
+}
